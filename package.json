@@ -2,11 +2,14 @@
   "name": "technical_blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://qwer71714.github.io/technical_blog/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
@@ -20,6 +23,7 @@
     "date-fns": "^3.6.0",
     "dompurify": "^3.1.6",
     "firebase": "^10.13.0",
+    "gh-pages": "^6.1.1",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.10.0",
     "markdown-it": "^14.1.0",
