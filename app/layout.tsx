@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { ToastContainer, toast } from 'react-toastify';
 
-const inter = Inter({ subsets: ["latin"] });
+import Navigation from "./Components/Menu/Navigation";
+
+import "./globals.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <ToastContainer
+          position="bottom-center"
+          closeButton={false}
+          autoClose={1800}
+          hideProgressBar
+        />
+        <Navigation />
+        <main className="mx-auto mt-12 w-2/3">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

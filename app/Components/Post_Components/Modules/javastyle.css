@@ -1,0 +1,84 @@
+/* General Code Block Styling */
+code {
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Syntax Highlighting */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #7d8b99; /* Comment color */
+}
+
+.token.punctuation {
+    color: #f8f8f2; /* Default text color */
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #f92672; /* Red for important parts */
+}
+
+.token.boolean,
+.token.number {
+    color: #ae81ff; /* Purple for numbers and booleans */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a6e22e; /* Green for strings */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+    color: #f8f8f2; /* Default text color */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+    color: #e6db74; /* Yellow for functions */
+}
+
+.token.keyword {
+    color: #66d9ef; /* Blue for keywords */
+}
+
+.token.regex,
+.token.important {
+    color: #fd971f;
+}
+
+/* Bold important code parts */
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+/* Italicize comments */
+.token.italic {
+    font-style: italic;
+}
+
+/* Underline hyperlinks */
+pre a {
+    text-decoration: underline;
+    color: inherit; /* Keep the same color */
+}
