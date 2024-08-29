@@ -9,4 +9,4 @@ date: "2024-12-28"
 coverImage: "/assets/blog/preview/cover.jpg"
 ---
 
-아잉 시발
+아잉 아깝게
