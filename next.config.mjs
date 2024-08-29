@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+export const prefix =
+    process.env.NODE_ENV === "production"
+        ? "https://qwer71714.github.io/technical_blog/"
+        : "";
