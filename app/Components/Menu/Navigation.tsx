@@ -7,8 +7,8 @@ import NavbarButton from '../Button/NavbarButton'
 export default function Navigation() {
     const NavigationRoute = NavigationMenu()
     return (
-        <div className='border-[CECECE] bg-white border-b'>
-            <div className='mx-auto py-2 w-5/6'>
+        <header className='border-[CECECE] bg-white border-b'>
+            <div className='mx-auto py-2 w-5/6 '>
                 <div className='flex items-center gap-12'>
                     <Link href={"/"} >
                         <h1 className='font-bold text-[28px]'>Logo</h1>
@@ -28,6 +28,6 @@ export default function Navigation() {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }

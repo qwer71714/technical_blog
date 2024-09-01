@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import { Children, useMemo } from "react"
 
 export const ExtraRouter = () => {
     const router = useMemo(
@@ -11,4 +11,26 @@ export const ExtraRouter = () => {
         []
     )
     return router
+}
+
+export const FooterRouter = () => {
+    const pooterrouter = useMemo(
+        () => [
+            {
+                label: "나의 소개",
+                href: "#"
+            },
+            {
+                label: "나의 포트폴리오",
+                href: "#"
+            },
+            {
+                label: "문의 : qwer71714@naver.com",
+                href: "#"
+            },
+        ],
+        []
+    )
+
+    return pooterrouter
 }

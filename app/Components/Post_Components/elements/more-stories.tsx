@@ -17,15 +17,19 @@ const MoreStoriesClient: React.FC<MoreStoriesClientProps> = ({ posts }) => {
     setFilteredPosts(filtered);
   };
 
+  const handleShowAllClick = () => {
+    setFilteredPosts(posts); // 모든 포스트를 다시 표시
+  };
+
   return (
-    <section className='mb-32'>
+    <section>
       <div className="flex flex-col gap-12">
         <div className="flex items-center mb-[36px] justify-between">
           <h1 className="font-bold text-3xl">
             기술 블로그
           </h1>
           <div>
-            <MoreStoriesModal posts={posts} onTagClick={handleTagClick} />
+            <MoreStoriesModal posts={posts} onTagClick={handleTagClick} onShowAllClick={handleShowAllClick} />
           </div>
         </div>
         {

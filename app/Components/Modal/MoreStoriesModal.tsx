@@ -13,6 +13,7 @@ interface ModalProps {
 interface MoreStoriesModalProps {
     posts: Post[];
     onTagClick: (tag: string) => void;
+    onShowAllClick: () => void;
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
@@ -41,7 +42,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     );
 };
 
-const MoreStoriesModal: React.FC<MoreStoriesModalProps> = ({ posts, onTagClick }) => {
+const MoreStoriesModal: React.FC<MoreStoriesModalProps> = ({ posts, onTagClick, onShowAllClick }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const toggleModal = () => setIsOpen(prev => !prev);
@@ -60,7 +61,7 @@ const MoreStoriesModal: React.FC<MoreStoriesModalProps> = ({ posts, onTagClick }
     };
 
     const formattedTags = Object.keys(countTags(posts)).map(tag => (
-        <p key={tag} onClick={() => { onTagClick(tag); toggleModal() }}>
+        <p key={tag} onClick={() => { onTagClick(tag); toggleModal() }} className='hover:text-stone-900/80'>
             {tag} ({countTags(posts)[tag]})
         </p>
     ));
@@ -71,20 +72,26 @@ const MoreStoriesModal: React.FC<MoreStoriesModalProps> = ({ posts, onTagClick }
                 onClick={toggleModal}
                 className="bg-stone-200/60 hover:bg-stone-200/80 px-4 py-2 rounded-md"
             >
-                모달 열기
+                태그 열기
             </button>
 
             <Modal isOpen={isOpen} onClose={toggleModal}>
-                <button
-                    className='
+                <div className='text-2xl font-bold'>
+                    <button
+                        className='mb-4'
+                        onClick={() => { onShowAllClick(); toggleModal(); }}
+                    >
+                        <p>전체보기</p>
+                    </button>
+                    <div
+                        className='
                         flex
                         flex-col
-                        text-2xl
-                        font-bold
                         gap-4
                     '>
-                    {formattedTags}
-                </button>
+                        {formattedTags}
+                    </div>
+                </div>
             </Modal>
         </div>
     );
