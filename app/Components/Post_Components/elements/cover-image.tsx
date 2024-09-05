@@ -20,8 +20,8 @@ const CoverImage: React.FC<CoverImageProps> = ({
                     <Image
                         src={src}
                         alt={`Cover Image for ${title}`}
-                        className={cn("shadow-sm w-full", {
-                            "hover:shadow-lg transition-shadow duration-200": slug,
+                        className={cn("shadow-sm w-[880px] h-[502px]", {
+                            "hover:shadow-lg transition-shadow duration-200 ": slug,
                         })}
                         width={880}
                         height={502}
@@ -31,7 +31,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
                 <Image
                     src={src}
                     alt={`Cover Image for ${title}`}
-                    className={cn("w-full rounded-3xl", {
+                    className={cn("rounded-3xl  w-[880px] h-[502px]", {
                         "hover:shadow-lg transition-shadow duration-200": slug,
                     })}
                     width={880}
