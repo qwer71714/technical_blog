@@ -1,4 +1,4 @@
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/utils/supabase/server';
 import matter from "gray-matter";
 import Post from "@/app/interfaces/post";
 
