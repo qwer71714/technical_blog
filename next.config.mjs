@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 export const prefix =
-    process.env.NODE_ENV === "production"
+    process.env.NEXT_PUBLIC_SUPABASE_URL === "production"
         ? "/technical_blog" // 절대 URL 대신 경로만 지정
         : "";
 
