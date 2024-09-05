@@ -61,7 +61,7 @@ const MoreStoriesModal: React.FC<MoreStoriesModalProps> = ({ posts, onTagClick, 
     };
 
     const formattedTags = Object.keys(countTags(posts)).map(tag => (
-        <p key={tag} onClick={() => { onTagClick(tag); toggleModal() }} className='hover:text-stone-900/80'>
+        <p key={tag} onClick={() => { onTagClick(tag); toggleModal() }} className='hover:text-stone-900/80 cursor-pointer'>
             {tag} ({countTags(posts)[tag]})
         </p>
     ));

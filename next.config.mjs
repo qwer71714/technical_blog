@@ -6,6 +6,7 @@ export const prefix =
 
 // Next.js 설정
 const nextConfig = {
+    reactStrictMode: true,
     // 외부 이미지 도메인 설정
     images: {
         remotePatterns: [
