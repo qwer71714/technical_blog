@@ -1,6 +1,7 @@
-import { createClient } from '@/utils/supabase/server';
+
 import matter from "gray-matter";
 import Post from "@/app/interfaces/post";
+import { createClient } from "@/app/utils/supabase/server";
 
 const supabase = createClient();
 const BUCKET_NAME = 'Technical_Blog';
