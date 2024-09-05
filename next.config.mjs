@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 export const prefix =
     process.env.NODE_ENV === "production"
-        ? "https://qwer71714.github.io/technical_blog/"
+        ? "/technical_blog" // 절대 URL 대신 경로만 지정
         : "";
 
 // Next.js 설정
